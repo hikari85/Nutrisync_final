@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diet & Fitness - NutriSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dietfitness.css') }}">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo">
+        <h1>NutriSync</h1>
+
+        <div class="rectangle-wrapper">
+            <img src="{{ url_for('static', filename='images/rectangleheader.png') }}" alt="rectangleheader" class="rectangleheader">
+            
+            <div class="rectangle-links">
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/logout">Logout</a>
+            </div>               
+        </div>
+    </div>
+</header>
+
+
+    <div class="recipes">
+        <h2>Recommended Diet Plans</h2>
+        <h1>Veg Recipes</h1>
+        <div class="veg">
+            
+            <div class="recipe-card">
+                <img src="{{ url_for('static', filename='images/masalaidli.png') }}" alt="Veg Recipe 1">
+                <h3>Masala Idli (10 mins)</h3>
+                <details class="recipe-collapse">
+                    <summary class="recipe-link">
+                        <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+                        Recipe
+                    </summary>
+                        <div class="recipe-details">
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>2 cups idli (cut into cubes)</li>
+                                <li>1 chopped onion</li>
+                                <li>1 chopped tomato</li>
+                                <li>1/2 tsp mustard seeds</li>
+                                <li>Curry leaves</li>
+                                <li>1/4 tsp turmeric</li>
+                                <li>Salt to taste</li>
+                            </ul>
+
+                            <h4>Instructions:</h4>
+                            <p>Heat oil, splutter mustard seeds and curry leaves. Add onions and sauté. Add tomatoes and spices. Toss in idli cubes and cook for 2-3 mins. Serve hot!</p>
+                        </div>
+                </details>
+            </div>
+
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/pancake.png') }}" alt="Veg Recipe 2">
+    <h3>Pancake (10 mins)</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>1/2 cup whole wheat flour</li>
+                <li>1/4 tsp baking powder</li>
+                <li>1/4 tsp cinnamon powder</li>
+                <li>Pinch of salt</li>
+                <li>1/2 cup milk (dairy or plant-based)</li>
+                <li>1 egg</li>
+                <li>1 tsp vanilla extract</li>
+                <li>1 tbsp honey or maple syrup</li>
+                <li>Optional: 1/4 cup mashed banana or unsweetened applesauce</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Whisk the dry ingredients together, then add the wet ingredients and mix into a smooth batter. Heat a non-stick pan and pour in the batter, cooking for 2-3 minutes per side until golden. Serve with fresh fruit, yogurt, or a drizzle of honey.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/yogurtberries.png') }}" alt="Veg Recipe 3">
+    <h3>Yogurt & Berries (5 mins)</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>1 cup plain Greek yogurt</li>
+                <li>1/2 cup mixed fresh berries (strawberries, blueberries, raspberries)</li>
+                <li>1 tsp honey or maple syrup (optional)</li>
+                <li>Optional: Chia seeds or crushed nuts</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>In a bowl, add Greek yogurt and top it with fresh berries. Drizzle a little honey if desired and sprinkle chia seeds or nuts for added crunch. Mix gently and enjoy immediately as a refreshing, protein-rich snack.</p>
+        </div>
+    </details>
+</div>
+
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/ragimalt.png') }}" alt="Veg Recipe 4">
+    <h3>Ragi Malt (10 mins)</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>2 tablespoons ragi (finger millet) flour</li>
+                <li>1 cup water or milk (or a mix of both)</li>
+                <li>1 teaspoon jaggery or honey (optional)</li>
+                <li>1/4 teaspoon cardamom powder</li>
+                <li>Pinch of salt (optional)</li>
+                <li>Optional garnish: Chopped nuts</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Start by roasting the ragi flour lightly on medium heat until it gives a pleasant aroma. Then, add the water or milk and stir continuously to avoid lumps. Cook for 3–4 minutes until the mixture thickens. Add the jaggery or honey, cardamom powder, and salt, stirring well. Once it reaches a pudding-like consistency, remove from heat. Serve hot or chilled, and garnish with chopped nuts if desired.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/noodles.png') }}" alt="Veg Recipe 5">
+    <h3>Noodles (20 mins)</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>1 serving whole wheat noodles (cooked)</li>
+                <li>1/2 cup chopped vegetables (carrots, bell peppers, beans, peas)</li>
+                <li>1 tsp soy sauce</li>
+                <li>1/2 tsp sesame oil</li>
+                <li>1/2 tsp ginger-garlic paste</li>
+                <li>Salt and pepper to taste</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Stir-fry the vegetables in sesame oil with ginger-garlic paste. Add the cooked noodles, soy sauce, salt, and pepper. Toss everything together and cook for 2–3 minutes until well mixed. Serve hot, optionally garnished with sesame seeds or fresh coriander.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/avocadotoast.png') }}" alt="Veg Recipe 6">
+    <h3>Avocado Toast (10 mins)</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>1 slice whole-grain bread (toasted)</li>
+                <li>1 ripe avocado (mashed)</li>
+                <li>1/2 tsp lemon juice</li>
+                <li>Pinch of salt and pepper</li>
+                <li>Optional: red pepper flakes or a poached egg</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Spread the mashed avocado mixed with lemon juice, salt, and pepper evenly over the toasted bread. Add your preferred toppings like red pepper flakes or a poached egg. Serve immediately for a creamy, nutrient-packed breakfast.</p>
+        </div>
+    </details>
+</div>
+
+
+        </div>
+        <h1>Non Veg Recipes</h1>
+        <div class="nonveg">
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/fishcurry.jpeg') }}" alt="Non Veg Recipe 1">
+    <h3>Fish Curry</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>300 grams fish fillets (tilapia or cod)</li>
+                <li>1 tablespoon oil</li>
+                <li>1 onion, chopped</li>
+                <li>2 tomatoes, chopped</li>
+                <li>1 tablespoon ginger-garlic paste</li>
+                <li>1 tsp each of turmeric, red chili, coriander & cumin powder</li>
+                <li>1 teaspoon garam masala</li>
+                <li>Salt to taste</li>
+                <li>1/2 cup coconut milk or 1 cup water</li>
+                <li>Fresh coriander leaves</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Heat oil in a pan and sauté onions until golden. Add ginger-garlic paste and cook briefly. Stir in chopped tomatoes and all the spices. Cook until oil separates. Add coconut milk or water and bring to a simmer. Add fish fillets and cook for 10–12 minutes until tender. Garnish with coriander and serve hot with rice or roti.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/chickencurry.jpeg') }}" alt="Non Veg Recipe 2">
+    <h3>Chicken Curry</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>500 grams chicken pieces</li>
+                <li>1 tablespoon oil</li>
+                <li>1 onion, chopped</li>
+                <li>2 tomatoes, chopped</li>
+                <li>1 tablespoon ginger-garlic paste</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>1 teaspoon red chili powder</li>
+                <li>1 teaspoon coriander powder</li>
+                <li>1 teaspoon cumin powder</li>
+                <li>1 teaspoon garam masala</li>
+                <li>Salt to taste</li>
+                <li>1/2 cup coconut milk or 1 cup water</li>
+                <li>Fresh coriander leaves for garnish</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Heat oil in a pan and sauté chopped onions until golden. Add ginger-garlic paste and cook for 1 minute. Add chopped tomatoes and spices (turmeric, chili, coriander, cumin) and cook until oil separates. Add coconut milk or water and bring to a simmer. Add chicken pieces and cook for 20–25 minutes until the chicken is tender. Sprinkle garam masala, garnish with coriander, and serve hot with rice or roti.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/steamedfish.png') }}" alt="Non Veg Recipe 3">
+    <h3>Steamed Fish</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>1 whole fish (like tilapia, snapper, or pomfret)</li>
+                <li>1 tablespoon olive oil</li>
+                <li>1 lemon (sliced)</li>
+                <li>2-3 garlic cloves (smashed)</li>
+                <li>1 teaspoon ginger (grated)</li>
+                <li>Salt and pepper to taste</li>
+                <li>Fresh coriander for garnish</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Season the fish with salt, pepper, ginger, and garlic. Place lemon slices on top and drizzle with olive oil. Wrap the fish in foil or place it in a steamer basket. Steam for 15–20 minutes until the fish is tender and fully cooked. Garnish with fresh coriander and serve hot.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/muttonpaya.jpg') }}" alt="Non Veg Recipe 4">
+    <h3>Mutton Paya</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>500 grams mutton trotters (paya)</li>
+                <li>1 onion chopped</li>
+                <li>2 tomatoes chopped</li>
+                <li>1 tablespoon ginger-garlic paste</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>1 teaspoon red chili powder</li>
+                <li>1 teaspoon coriander powder</li>
+                <li>1 teaspoon cumin powder</li>
+                <li>1 teaspoon garam masala</li>
+                <li>2–3 green cardamom pods</li>
+                <li>1 cinnamon stick</li>
+                <li>3–4 cloves</li>
+                <li>2 tablespoons oil</li>
+                <li>Salt to taste</li>
+                <li>Fresh coriander leaves for garnish</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Heat oil in a large pot and sauté onions until golden. Add ginger-garlic paste and cook for a minute. Add chopped tomatoes, turmeric, chili powder, coriander, and cumin powder, and cook until the oil separates. Add the mutton trotters along with cardamom, cinnamon, and cloves. Pour enough water to cover the meat and pressure cook for 30–40 minutes until the mutton is tender. Sprinkle garam masala, garnish with fresh coriander, and serve hot with naan or rice.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/eggburji.jpg') }}" alt="Non Veg Recipe 5">
+    <h3>Egg Burji</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>4 eggs</li>
+                <li>1 tablespoon oil</li>
+                <li>1 onion, chopped</li>
+                <li>1 tomato, chopped</li>
+                <li>1–2 green chilies, chopped</li>
+                <li>1 teaspoon ginger-garlic paste</li>
+                <li>1/2 teaspoon turmeric powder</li>
+                <li>1 teaspoon red chili powder</li>
+                <li>1 teaspoon cumin powder</li>
+                <li>1 teaspoon garam masala</li>
+                <li>Salt to taste</li>
+                <li>Fresh coriander leaves for garnish</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Heat oil in a pan and sauté chopped onions and green chilies until golden. Add ginger-garlic paste and cook for a minute. Add chopped tomatoes and cook until soft. Sprinkle turmeric, chili powder, cumin powder, and salt. Beat the eggs in a bowl, pour them into the pan, and scramble everything together until the eggs are fully cooked. Add garam masala and garnish with fresh coriander. Serve hot with roti or toast.</p>
+        </div>
+    </details>
+</div>
+
+            <div class="recipe-card">
+    <img src="{{ url_for('static', filename='images/crabcurry.jpg') }}" alt="Non Veg Recipe 6">
+    <h3>Crab Curry</h3>
+    <details class="recipe-collapse">
+        <summary class="recipe-link">
+            <img src="{{ url_for('static', filename='images/recipelogo.png') }}" alt="Recipe Icon">
+            Recipe
+        </summary>
+        <div class="recipe-details">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>500 grams crab (cleaned and cut into pieces)</li>
+                <li>1 tablespoon oil</li>
+                <li>1 onion, chopped</li>
+                <li>2 tomatoes, chopped</li>
+                <li>1 tablespoon ginger-garlic paste</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>1 teaspoon red chili powder</li>
+                <li>1 teaspoon coriander powder</li>
+                <li>1 teaspoon cumin powder</li>
+                <li>1 teaspoon garam masala</li>
+                <li>1/2 cup coconut milk or 1 cup water</li>
+                <li>Fresh coriander leaves for garnish</li>
+                <li>Salt to taste</li>
+            </ul>
+
+            <h4>Instructions:</h4>
+            <p>Heat oil in a pan and sauté onions until golden. Add ginger-garlic paste and cook for 1 minute. Add chopped tomatoes, turmeric, chili powder, coriander powder, cumin powder, and salt, and cook until the oil separates. Add the crab pieces and stir to coat them in the spices. Add coconut milk or water, bring to a simmer, and cook for 15-20 minutes until the crab is fully cooked. Sprinkle garam masala, garnish with coriander leaves, and serve hot with rice or naan.</p>
+        </div>
+    </details>
+</div>
+
+        </div>
+    </div>
+
+<!-- Fitness Videos -->
+    <div class="exercise">
+    <h1>Exercise Videos</h1>
+
+    <div class="exercise-videos">
+        <div class="exercise-card">
+            <img src="{{ url_for('static', filename='images/yoga.png') }}" alt="Jumping Jacks">
+            <h3>21 day yoga challenge</h3>
+            <a href="https://www.youtube.com/watch?v=CuauA7lhkA4&list=PL_zQ5xq2u4RxGvjw4xjYYaf-qs7Yb2Okt" target="_blank">
+                <button>Watch Video</button>
+            </a>
+        </div>
+        <div class="exercise-card">
+            <img src="{{ url_for('static', filename='images/cardio.png') }}" alt="Plank">
+            <h3>How To Build Muscle</h3>
+            <a href="https://www.youtube.com/watch?v=lu_BObG6dj8" target="_blank">
+                <button>Watch Video</button>
+            </a>
+        </div>
+        <div class="exercise-card">
+            <img src="{{ url_for('static', filename='images/dance.png') }}" alt="Mountain Climbers">
+            <h3>10 Day Shuffle Dance Transformation</h3>
+            <a href="https://www.youtube.com/watch?v=N0G9sHGenhw" target="_blank">
+                <button>Watch Video</button>
+            </a>
+        </div>
+    </div>
+
+<div class="footer">
+            <div class="box">
+                <!-- Box 1 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer">
+                <h3>NUTRISYNC</h3> 
+                <a href="{{ url_for('register') }}" class="footer-signup-button">Start Today</a>
+
+            </div>
+            <div class="box">
+                <!-- Box 2 -->
+                <h3><a href="{{ url_for('home') }}">Home</a></h3>
+                <h3><a href="{{ url_for('about') }}">About Us</a></h3>
+
+            </div>
+            <div class="box">
+                <!-- Box 3 -->
+                <h3>Our Features:</h2>
+                <h3>Meal Plans</h3>
+                <h3>Recipes</h3>
+                <h3>AI Chat Suggestions</h3>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="box">
+                <!-- Box 4 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer"> 
+                <h3>Your personalized path to healthier life !</h3>
+                <h3>Contact: +9481131351</h3>    
+            </div>
+            
+    
+        </div>
+
+</div>
+
+</body>
+</html>

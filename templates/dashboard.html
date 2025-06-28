@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard - NutriSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome, {{ user.name }}!</h1>
+    </header>
+
+    <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <p>Your Height: {{ user.height }} cm</p>
+        <p>Your Weight: {{ user.weight }} kg</p>
+        <p>Your Goal Weight: {{ user.goal_weight }} kg</p>
+        <p>Fitness Goal: {{ user.fitness_goal }}</p>
+        <p>Activity Level: {{ user.activity_level }}</p>
+
+        <!-- <button id="editProfileBtn">Edit Profile</button> -->
+        <div class="button-group">
+            <button id="editProfileBtn">Edit Profile</button>
+            <a href="{{ url_for('diet_fitness') }}"><button type="button">View Diet & Fitness Videos</button></a>
+        </div>
+
+        <!-- Log Daily Health Data -->
+        <h3>Log Daily Health Data</h3>
+        <form action="/log" method="POST">
+            <label>Date:</label>
+            <input type="date" name="date" required><br>
+
+            <label>Weight (kg):</label>
+            <input type="number" step="0.1" name="weight"><br>
+
+            <label>Water Intake (L):</label>
+            <input type="number" step="0.1" name="water"><br>
+
+            <label>Sleep (hrs):</label>
+            <input type="number" step="0.1" name="sleep"><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+        <h3>Health Trends</h3>
+        <div class="chart-row">
+            <canvas id="weightChart" width="300" height="200"></canvas>
+            <canvas id="waterChart" width="300" height="200"></canvas>
+            <canvas id="sleepChart" width="300" height="200"></canvas>
+        </div>
+
+        <hr>
+        <h2>NutriSync Chatbot</h2>
+        <form method="POST" action="/chatbot">
+            <label>Ask something:</label><br>
+            <input type="text" name="message" required style="width: 80%;">
+            <button type="submit">Send</button>
+        </form>
+
+        {% if user_message %}
+            <p><strong>You:</strong> {{ user_message }}</p>
+        {% endif %}
+        {% if bot_reply %}
+            <p><strong>NutriBot:</strong> {{ bot_reply }}</p>
+        {% endif %}
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Profile</h2>
+            <form action="/edit_profile" method="POST">
+                <label>Name:</label>
+                <input type="text" name="name" value="{{ user.name }}" required><br>
+
+                <label>Gender:</label>
+                <select name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male" {% if user.gender == 'Male' %}selected{% endif %}>Male</option>
+                    <option value="Female" {% if user.gender == 'Female' %}selected{% endif %}>Female</option>
+                    <option value="Other" {% if user.gender == 'Other' %}selected{% endif %}>Other</option>
+                </select><br>
+
+                <label>Date of Birth:</label>
+                <input type="date" name="dob" value="{{ user.dob }}"><br>
+
+                <label>Height (cm):</label>
+                <input type="number" name="height" value="{{ user.height }}"><br>
+
+                <label>Weight (kg):</label>
+                <input type="number" name="weight" value="{{ user.weight }}"><br>
+
+                <label>Goal Weight (kg):</label>
+                <input type="number" name="goal_weight" value="{{ user.goal_weight }}"><br>
+
+                <label>Phone Number (optional):</label>
+                <input type="text" name="phone" value="{{ user.phone }}"><br>
+
+                <label>Username:</label>
+                <input type="text" name="username" value="{{ user.username }}" required><br>
+
+                <label>Password:</label>
+                <input type="password" name="password" required><br>
+
+                <label>Fitness Goal:</label>
+                <select name="fitness_goal" required>
+                    <option value="">Select your goal</option>
+                    <option value="Lose Weight" {% if user.fitness_goal == 'Lose Weight' %}selected{% endif %}>Lose Weight</option>
+                    <option value="Build Muscle" {% if user.fitness_goal == 'Build Muscle' %}selected{% endif %}>Build Muscle</option>
+                    <option value="Stay Fit" {% if user.fitness_goal == 'Stay Fit' %}selected{% endif %}>Stay Fit</option>
+                </select><br>
+
+                <label>Activity Level:</label>
+                <select name="activity_level" required>
+                    <option value="">Select activity level</option>
+                    <option value="Low" {% if user.activity_level == 'Low' %}selected{% endif %}>Low</option>
+                    <option value="Medium" {% if user.activity_level == 'Medium' %}selected{% endif %}>Medium</option>
+                    <option value="High" {% if user.activity_level == 'High' %}selected{% endif %}>High</option>
+                </select><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Health Logs -->
+    <script>
+        const healthLogs = {{ health_logs | tojson | safe }};
+    </script>
+    <script src="{{ url_for('static', filename='js/health_charts.js') }}"></script>
+    <script>
+        renderHealthCharts(healthLogs);
+    </script>
+    <script src="{{ url_for('static', filename='js/popupedit.js') }}"></script>
+
+    
+</body>
+</html>

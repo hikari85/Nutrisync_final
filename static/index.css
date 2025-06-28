@@ -1,0 +1,331 @@
+header {
+    /* background-color: #4caf50; */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.background{
+    background-color: #40545c;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+.nav-buttons a {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-buttons a:hover {
+    background-color: #45a049;
+}
+
+
+.header-content {
+    display: flex; /* This will display its children (logo & rectangle) horizontally */
+    align-items: center; /* Vertically center the items */
+    gap: 12px; /* Space between the logo and the rectangle */
+    justify-content: center; /* Center horizontally in the header */
+    
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* new code */
+
+
+.rectangle-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.rectangleheader {
+    width: 1000px;
+    height: auto;
+    display: block;
+}
+
+.rectangle-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+
+.rectangle-links a {
+    padding: 10px 20px;
+    background-color: transparent; /* remove button background */
+    color: black; /* text color */
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* optional: adds a bit more weight */
+    border-radius: 6px;
+    transition: color 0.3s ease;
+}
+
+.rectangle-links a:hover {
+    background-color: #45a049;
+}
+
+.loginlogo {
+    width: 80px;
+    height: auto;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+/* sign up section chatgpt */
+
+.signup {
+    text-align: center;  /* Centers everything inside the div */
+    color: #ffffff;
+}
+
+.signup h1 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.signup-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background-color: orange;
+    color: white;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #45a049;
+}
+
+/* Flexbox layout */
+.signup-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px; /* Space between the button and the flex content */
+}
+
+.signup-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* .signup-text p {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.signup-images {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.signup-images img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* sign up section chatgpt */
+
+/* Philosophy section */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.philosophy-section {
+    margin-top: 100px;
+    padding: 40px;
+    background-color: #40545c; /* You can change this background if needed */
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+/* philosophy section */
+
+/* qna section */
+
+
+.qna-section {
+    margin: 30px;
+    padding: 20px;
+    background-color: #40545c;
+    border-radius: 8px;
+}
+
+.qna-item {
+    margin-bottom: 10px;
+}
+
+.qna-question {
+    width: 100%;
+    padding: 10px;
+    background-color:white;
+    color: black;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 10px;
+}
+.dropdown-arrow {
+    
+    width: 30px; /* Adjust the size of the arrow */
+    height: auto;
+    float:right;
+}
+.qna-section p {
+    font-size: 45px; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;   
+    color: #AFECFF;
+}
+
+.qna-question:hover {
+    background-color: #45a049;
+}
+
+.qna-answer {
+    padding: 10px;
+    display: none; /* Initially hide the answer */
+    background-color: #e8f5e9;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.qna-answer p {
+    font-size: 16px;
+    color: #333;
+}
+
+.qna-item.active .qna-answer {
+    display: block; /* Show the answer when the item is active */
+}
+
+
+/* qna section */
+
+/* footer section */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #403c3c;
+}
+
+.box {
+    flex: 1;                      /* Each box takes equal width */
+    aspect-ratio: 1;              /* Makes it a square */
+    margin: 50px;
+    background-color: #403c3c;
+    border-radius: 8px;
+    text-align: center;
+
+    line-height: 30px;           /* You can adjust this or use flex inside if you want centered content */
+    font-weight: bold;
+    /* gap:10px; */
+}
+.box h3{
+    color: white;
+    font-size: 24px;
+}
+.footer-signup-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.footer-signup-button:hover {
+    background-color: #45a049;
+}
+
+.logo-footer {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:visited {
+    color: white;
+}
+
+.footer a:hover {
+    color: orange; /* or any hover color you want */
+    text-decoration: underline;
+}
+
+/* footer section */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - NutriSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dietfitness.css') }}">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo">
+        <h1>NutriSync</h1>
+
+        <div class="rectangle-wrapper">
+            <img src="{{ url_for('static', filename='images/rectangleheader.png') }}" alt="rectangleheader" class="rectangleheader">
+            
+            <div class="rectangle-links">
+                <a href="/">Home</a>
+                <a href="{{ url_for('register') }}">Register</a>
+                
+            </div>               
+        </div>
+    </div>
+</header>
+    <div class="about">
+    <div class="about-left">
+        <h1>Welcome to NutriSync</h1>
+        <p>NutriSync is a comprehensive, user-friendly platform designed to empower you on your journey toward a healthier lifestyle. By seamlessly integrating personalized diet planning, a rich recipe library, health tracking tools, and real-time chatbot support, NutriSync provides everything you need in one convenient place.</p>
+    </div>
+    <div class="about-right">
+        <img src="{{ url_for('static', filename='images/about1.png') }}" alt="About Image">
+    </div>
+</div>
+
+    <div class="features">
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="Feature 1">
+        <p>Chatbot Support</p>
+    </div>
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/personalmeal.png') }}" alt="Feature 2">
+        <p>Personalized Diet Plans</p>
+    </div>
+    <div class="feature-item">
+        <img src="{{ url_for('static', filename='images/tracking.png') }}" alt="Feature 2">
+        <p>Smart Health Tracking</p>
+    </div>
+</div>
+
+</body>
+</html>
+

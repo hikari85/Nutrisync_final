@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - NutriSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <header class="background">
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo">
+            <h1>Login to NutriSync</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <!-- <a href="/login">Login</a> -->
+        <a href="/about">About</a>
+    </nav>
+
+    <div class="background">
+        <div class="container">
+            <form method="POST" action="/login">
+                <label>Username:</label>
+                <input type="text" name="username" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="footer">
+            <div class="box">
+                <!-- Box 1 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer">
+                <h3>NUTRISYNC</h3> 
+                <a href="{{ url_for('register') }}" class="footer-signup-button">Start Today</a>
+
+            </div>
+            <div class="box">
+                <!-- Box 2 -->
+                <h3><a href="{{ url_for('home') }}">Home</a></h3>
+                <h3><a href="{{ url_for('about') }}">About Us</a></h3>
+
+            </div>
+            <div class="box">
+                <!-- Box 3 -->
+                <h3>Our Features:</h2>
+                <h3>Meal Plans</h3>
+                <h3>Recipes</h3>
+                <h3>AI Chat Suggestions</h3>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="box">
+                <!-- Box 4 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer"> 
+                <h3>Your personalized path to healthier life !</h3>
+                <h3>Contact: +9481131351</h3>    
+            </div>
+            
+    
+        </div>
+
+</body>
+</html>

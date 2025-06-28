@@ -1,0 +1,102 @@
+/* Reset body spacing and set background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #40545c;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styling with logo */
+header {
+    background-color: #40545c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* Background wrapper */
+.background {
+    background-color: #40545c;
+    padding: 20px 0;
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form element styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Nav styling (consistent with login page) */
+nav {
+    background-color: #4caf50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

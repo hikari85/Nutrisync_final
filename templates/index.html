@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NutriSync - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="header-content">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo">
+                <h1>NutriSync</h1>
+
+                <div class="rectangle-wrapper">
+                <img src="{{ url_for('static', filename='images/rectangleheader.png') }}" alt="rectangleheader" class="rectangleheader">
+                    
+                    <div class="rectangle-links">
+                        <a href="{{ url_for('about') }}">About</a>
+                        <a href="#philosophy">Philosophy</a>
+                        <a href="#qna">QnA</a>
+                        <a href="{{ url_for('register') }}">Register</a>
+                    </div>               
+                </div>
+                <a href="{{ url_for('login') }}">
+                <img src="{{ url_for('static', filename='images/loginlogo.png') }}" alt="loginlogo" class="loginlogo">
+                <!-- <h2>Login</h2> -->
+                </a>
+                <h2>Login</h2> 
+            </div>
+        </header>
+
+        <div class="signup">
+            <h1>Your Personalized Path to a Healthier Life!</h1>
+            <a href="{{ url_for('register') }}" class="signup-button">Sign Up - For Free!</a>
+            
+            
+            <div class="signup-flex">
+                
+                <div class="signup-text">
+                    <h1>Welcome to HealthTrack – your all-in-one solution for a healthier lifestyle!</h1>
+                    <h2> Take control of your well-being with personalized diet plans, AI-powered recipe recommendations, and real-time health tracking</h2>
+                </div>
+                
+                
+                <div class="signup-images">
+                    <img src="{{ url_for('static', filename='images/dashboard.png') }}" alt="Healthy Lifestyle">
+                    <img src="{{ url_for('static', filename='images/womaneating.png') }}" alt="Nutrition">
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div id="philosophy" class="philosophy-section">
+            <h2>Our Philosophy: Empowering a Healthier You</h2>
+            <p>
+                At NutriSync, we believe that maintaining a healthy lifestyle should be simple, accessible, and enjoyable. Our philosophy revolves around three core principles:
+            </p>
+        </div>
+
+
+        <div id="qna" class="qna-section">
+            <p>Q n A</p>
+            
+            <div class="qna-item">
+                <button class="qna-question">
+                    What is NutriSync, and how does it help me?
+                    <img src="{{ url_for('static', filename='images/dropdownarrow.png') }}" alt="Dropdown Arrow" class="dropdown-arrow">
+                </button>
+                <div class="qna-answer">
+                    <p>NutriSync is a health and fitness platform designed to help you create personalized meal plans, track your health metrics, and get real-time feedback.</p>
+                </div>
+            </div>
+        
+            <div class="qna-item">
+                <button class="qna-question">
+                    How does NutriSync create a personalized meal plan?
+                    <img src="{{ url_for('static', filename='images/dropdownarrow.png') }}" alt="Dropdown Arrow" class="dropdown-arrow">
+                </button>
+                <div class="qna-answer">
+                    <p>NutriSync analyzes your health data and preferences to create a tailored meal plan that meets your nutritional needs and goals.</p>
+                </div>
+            </div>
+        
+            <div class="qna-item">
+                <button class="qna-question">
+                    Can I track my progress with NutriSync?
+                    <img src="{{ url_for('static', filename='images/dropdownarrow.png') }}" alt="Dropdown Arrow" class="dropdown-arrow">
+                </button>
+                <div class="qna-answer">
+                    <p>Yes, NutriSync allows you to track your weight, diet progress, and other health metrics over time to help you stay on track with your goals.</p>
+                </div>
+            </div>
+        
+            <div class="qna-item">
+                <button class="qna-question">
+                    Does NutriSync offer real-time assistance?
+                    <img src="{{ url_for('static', filename='images/dropdownarrow.png') }}" alt="Dropdown Arrow" class="dropdown-arrow">
+                </button>
+                <div class="qna-answer">
+                    <p>Yes, NutriSync provides real-time assistance, including AI-driven tips, reminders, and feedback to help you stay motivated and on track.</p>
+                </div>
+            </div>
+        
+            <div class="qna-item">
+                <button class="qna-question">
+                    Is NutriSync free to use?
+                    <img src="{{ url_for('static', filename='images/dropdownarrow.png') }}" alt="Dropdown Arrow" class="dropdown-arrow">
+                </button>
+                <div class="qna-answer">
+                    <p>NutriSync offers a free version with basic features, and premium options are available for enhanced features and support.</p>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="footer">
+            <div class="box">
+                <!-- Box 1 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer">
+                <h3>NUTRISYNC</h3> 
+                <a href="{{ url_for('register') }}" class="footer-signup-button">Start Today</a>
+
+            </div>
+            <div class="box">
+                <!-- Box 2 -->
+                <h3><a href="{{ url_for('home') }}">Home</a></h3>
+                <h3><a href="{{ url_for('about') }}">About Us</a></h3>
+
+            </div>
+            <div class="box">
+                <!-- Box 3 -->
+                <h3>Our Features:</h2>
+                <h3>Meal Plans</h3>
+                <h3>Recipes</h3>
+                <h3>AI Chat Suggestions</h3>
+                <h3>Dashboard</h3>
+            </div>
+            <div class="box">
+                <!-- Box 4 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NutriSync Logo" class="logo-footer"> 
+                <h3>Your personalized path to healthier life !</h3>
+                <h3>Contact: +9481131351</h3>    
+            </div>
+            
+    
+        </div>
+
+
+
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/qna.js') }}"></script>
+</body>
+</html>

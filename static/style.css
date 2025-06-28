@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+header {
+    background-color: #4caf50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    background-color: #388e3c;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    color: #777;
+}
+.success-message {
+    background-color: #e0f7e9;
+    color: #2e7d32;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border: 1px solid #a5d6a7;
+}
+
+/* charts display */
+.chart-row {
+    display: flex;
+    justify-content: space-around; /* even spacing */
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    margin-bottom: 30px;
+}
+
+.chart-row canvas {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}

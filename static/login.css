@@ -1,0 +1,155 @@
+/* Header styling with logo */
+header {
+    background-color: #40545c;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #40545c;
+}
+
+/* Container styling */
+.container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form elements */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Optional nav styling */
+nav {
+    background-color: #4caf50;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.background {
+    background-color: #40545c;
+    padding: 20px 0;
+}
+
+/* footer section */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #403c3c;
+}
+
+.box {
+    flex: 1;                      /* Each box takes equal width */
+    aspect-ratio: 1;              /* Makes it a square */
+    margin: 50px;
+    background-color: #403c3c;
+    border-radius: 8px;
+    text-align: center;
+
+    line-height: 30px;           /* You can adjust this or use flex inside if you want centered content */
+    font-weight: bold;
+    /* gap:10px; */
+}
+.box h3{
+    color: white;
+    font-size: 24px;
+}
+.footer-signup-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.footer-signup-button:hover {
+    background-color: #45a049;
+}
+
+.logo-footer {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:visited {
+    color: white;
+}
+
+.footer a:hover {
+    color: orange; /* or any hover color you want */
+    text-decoration: underline;
+}
+
+/* footer section */
